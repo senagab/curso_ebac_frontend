@@ -20,10 +20,12 @@ header .container {
 header {
     padding: 16px 0 0;
     border-bottom: 1px solid #ccc;
+    margin-bottom: 56px;
 }
 
 .submenu {
     display: none;
+    background-color: #fff;
     border-color: red;
     position: absolute; /* pai */
     left: 0;
@@ -35,7 +37,7 @@ header {
     float: left;
     list-style: none;
     padding: 16px;
-    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
     position: relative; /* filho  */
 }
 
@@ -56,3 +58,50 @@ header {
     padding: 8px;
 }
 
+.conteudo {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.noticia img {
+    max-width: 100%;
+}
+
+.destaque {
+    margin-bottom: 56px;
+}
+
+.destaque .noticia a {
+    display: flex;
+    font-size: 2em;
+}
+
+.destaque .noticia img {
+    margin-right: 8px;
+}
+
+section h2 {
+    margin-bottom: 32px;
+}
+
+aside {
+    padding-left: 40px;
+}
+
+aside .noticia {
+    margin-bottom: 24px;
+}
+
+.noticias {
+    display: grid;
+    /* grid-template-columns: 33.3% 33.3% 33.3%; */
+    grid-template-columns: repeat(3, 32.6%); 
+    /* espaço total: 100% */
+    /* (qtde) espaçamento entre 3 elementos: 2 ----> (elemento um) (espaço) (elemento dois) (espaço) (elemento três) */
+    /* espaço disponivel: 100 - 2 = 98% */
+    /* espaço disponivel dividido pela qtde de elementos = 32,6% */
+    column-gap: 1%;
+    /* espaçamento disponivel para separar 3 elementos: 2 */
+    /* espaçamento entre cada elemento 2 / 2 = 1% */
+    row-gap: 5%;
+}
